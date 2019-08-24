@@ -1,0 +1,125 @@
+<!--<div class="container-fluid">-->
+<!--  <h2>Check Weather</h2>-->
+<!--  <nav class="navbar navbar-dark bg-dark">-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"-->
+<!--            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--  </nav>-->
+<!--  <div class="row center">-->
+<!--    <div>-->
+<!--&lt;!&ndash;      <h2>Check Weather</h2>&ndash;&gt;-->
+<!--      <br>-->
+<!--      <br>-->
+<!--      <form id="searchForm">-->
+<!--        <input id="searchField" type="text" placeholder="City" aria-label="Search">-->
+<!--        <button id="searchBtn" type="submit">Search</button>-->
+<!--      </form>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+<header>
+  <div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>
+  <div class="row center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <form id="searchForm">
+        <input id="searchField" type="text" placeholder="City" aria-label="Search">
+        <button id="searchBtn" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+
+<div class="container-fluid">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row center">
+    <div class="Weather row center column-center">
+      <div class="Weather__main column column-center split-center"> <!-- Begin Main Bubble -->
+        <h3 id="provider">Open Weather</h3>
+        <h2 id="location">{{ owpWeather?.city}}</h2>
+        <span id="location">lat: {{ owpWeather?.lat}}, lon: {{ owpWeather?.lon}}</span>
+        <span id="temp">{{ owpWeather?.temp}}</span>
+      </div> <!-- End Main Bubble -->
+      <div class="Weather__right column-split"> <!-- Begin Right Side Bubbles -->
+        <div class="Weather__right-icon"> <!-- Begin Icon Bubble -->
+          <div class="column column-center"> <!-- Begin Current Coverage -->
+            <i id="icon" class="wi wi-day-sunny"></i>
+          </div> <!-- End Current Coverage -->
+        </div> <!-- End Icon Bubble -->
+        <div class="Weather__right-desc column center column-center"> <!-- Begin Time Bubble -->
+          <span id="desc">{{ owpWeather?.description}}</span>
+        </div> <!-- End Time Bubble -->
+        <i class="fa fa-refresh"></i>
+        <div id="refresh" class="Weather__right-refresh column center column-center">
+          <span>Refresh</span>
+        </div>
+      </div> <!-- End Right Side Bubbles -->
+    </div>
+
+
+    <div class="Weather row righ">
+      <div class="Weather__main column column-center split-center"> <!-- Begin Main Bubble -->
+        <h3 id="provider">Weather Bit</h3>
+        <h2 id="location">{{ weatherBitWeather?.city}}</h2>
+        <span id="location">lat: {{ weatherBitWeather?.lat}}, lon: {{ weatherBitWeather?.lon}}</span>
+        <span id="temp">{{ weatherBitWeather?.temp}}</span>
+      </div> <!-- End Main Bubble -->
+      <div class="Weather__right column-split"> <!-- Begin Right Side Bubbles -->
+        <div class="Weather__right-icon"> <!-- Begin Icon Bubble -->
+          <div class="column column-center"> <!-- Begin Current Coverage -->
+            <i id="icon" class="wi wi-day-sunny"></i>
+          </div> <!-- End Current Coverage -->
+        </div> <!-- End Icon Bubble -->
+        <div class="Weather__right-desc column center column-center"> <!-- Begin Time Bubble -->
+          <span id="desc">{{ weatherBitWeather?.description }}</span>
+        </div> <!-- End Time Bubble -->
+        <div id="refresh" class="Weather__right-refresh column center column-center">
+          <span>Refresh</span>
+        </div>
+      </div> <!-- End Right Side Bubbles -->
+    </div>
+
+    <div class="Weather row center">
+      <div class="Weather__main column column-center split-center"> <!-- Begin Main Bubble -->
+        <h3 id="provider">Apixu</h3>
+        <h2 id="location">{{ apixuWeather?.city }}</h2>
+        <span id="location">lat: {{ apixuWeather?.lat }}, lon: {{ apixuWeather?.lon }}</span>
+        <span id="temp">{{ apixuWeather?.temp}}</span>
+      </div> <!-- End Main Bubble -->
+      <div class="Weather__right column-split"> <!-- Begin Right Side Bubbles -->
+        <div class="Weather__right-icon"> <!-- Begin Icon Bubble -->
+          <div class="column column-center"> <!-- Begin Current Coverage -->
+            <i id="icon" class="wi wi-day-sunny"></i>
+          </div> <!-- End Current Coverage -->
+        </div> <!-- End Icon Bubble -->
+        <div class="Weather__right-desc column center column-center"> <!-- Begin Time Bubble -->
+          <span id="desc">{{ apixuWeather?.description }}</span>
+        </div> <!-- End Time Bubble -->
+        <div id="refresh" class="Weather__right-refresh column center column-center">
+          <span>Refresh</span>
+        </div>
+      </div> <!-- End Right Side Bubbles -->
+    </div>
+  </div>
+</div>
+
+
+<!--<div class="container">-->
+<!--  <router-outlet></router-outlet>-->
+<!--</div>-->
+
