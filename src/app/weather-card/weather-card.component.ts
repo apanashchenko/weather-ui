@@ -15,7 +15,7 @@ export class WeatherCardComponent implements OnInit {
   weatherBitForm: FormGroup;
   apixuForm: FormGroup;
   formBuilder: FormBuilder;
-  owpWeather: Weather;
+  owmWeather: Weather;
   apixuWeather: Weather;
   weatherBitWeather: Weather;
   http: HttpService;
@@ -28,16 +28,16 @@ export class WeatherCardComponent implements OnInit {
 
   ngOnInit() {
     this.http.getOpenWeatherMap('dnipro').subscribe(data => {
-      this.owpWeather = data;
-      console.log(this.owpWeather);
+      this.owmWeather = data;
+      console.log(this.owmWeather);
     });
     this.http.getApixu('los angeles').subscribe(data => {
       this.apixuWeather = data;
-      console.log(this.owpWeather);
+      console.log(this.owmWeather);
     });
     this.http.getWeatherBit('sydney').subscribe(data => {
       this.weatherBitWeather = data;
-      console.log(this.owpWeather);
+      console.log(this.owmWeather);
     });
   }
 
@@ -82,8 +82,8 @@ export class WeatherCardComponent implements OnInit {
 
   getOpenWeatherMap(city) {
     this.http.getOpenWeatherMap(city).subscribe(data => {
-      this.owpWeather = data;
-      console.log(this.owpWeather);
+      this.owmWeather = data;
+      console.log(this.owmWeather);
     });
   }
 

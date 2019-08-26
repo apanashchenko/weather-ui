@@ -47,12 +47,12 @@
   <br>
   <br>
   <div class="row center">
-    <div id="owpWidget" class="Weather row center column-center">
+    <div id="owmWidget" class="Weather row center column-center">
       <div class="Weather__main column column-center split-center">
         <h3 id="provider">Open Weather</h3>
-        <h2 id="location">{{ owpWeather?.city}}</h2>
-        <span id="location">lat: {{ owpWeather?.lat}}, lon: {{ owpWeather?.lon}}</span>
-        <span id="temp">{{ owpWeather?.temp}}</span>
+        <h2 id="location" data-id="city">{{ owmWeather?.city}}</h2>
+        <span id="location" data-id="coord">lat: {{ owmWeather?.lat}}, lon: {{ owmWeather?.lon}}</span>
+        <span id="temp">{{ owmWeather?.temp}}</span>
       </div>
       <div class="Weather__right column-split">
         <div class="Weather__right-icon">
@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="Weather__right-desc column center column-center">
-          <span id="desc">{{ owpWeather?.description}}</span>
+          <span id="desc">{{ owmWeather?.description}}</span>
         </div>
         <i class="fa fa-refresh"></i>
         <div id="refresh" class="Weather__right-refresh column center column-center" (click)="submitOwm()">
@@ -73,8 +73,8 @@
     <div id="wbWidget" class="Weather row righ">
       <div class="Weather__main column column-center split-center">
         <h3 id="provider">Weather Bit</h3>
-        <h2 id="location">{{ weatherBitWeather?.city}}</h2>
-        <span id="location">lat: {{ weatherBitWeather?.lat}}, lon: {{ weatherBitWeather?.lon}}</span>
+        <h2 id="location" data-id="city">{{ weatherBitWeather?.city}}</h2>
+        <span id="location" data-id="coord">lat: {{ weatherBitWeather?.lat}}, lon: {{ weatherBitWeather?.lon}}</span>
         <span id="temp">{{ weatherBitWeather?.temp}}</span>
       </div>
       <div class="Weather__right column-split">
@@ -95,8 +95,8 @@
     <div id="apixuWidget" class="Weather row center">
       <div class="Weather__main column column-center split-center">
         <h3 id="provider">Apixu</h3>
-        <h2 id="location">{{ apixuWeather?.city }}</h2>
-        <span id="location">lat: {{ apixuWeather?.lat }}, lon: {{ apixuWeather?.lon }}</span>
+        <h2 id="location" data-id="city">{{ apixuWeather?.city }}</h2>
+        <span id="location" data-id="coord">lat: {{ apixuWeather?.lat }}, lon: {{ apixuWeather?.lon }}</span>
         <span id="temp">{{ apixuWeather?.temp}}</span>
       </div>
       <div class="Weather__right column-split">
