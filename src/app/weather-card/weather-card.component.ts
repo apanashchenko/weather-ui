@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpService} from "../http.service";
 import {Weather} from "../model/weather";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {ToastrService} from "ngx-toastr";
+import {Joke} from "../model/joke";
 
 @Component({
   selector: 'app-weather-card',
@@ -19,6 +21,8 @@ export class WeatherCardComponent implements OnInit {
   apixuWeather: Weather;
   weatherBitWeather: Weather;
   http: HttpService;
+  joke: Joke;
+  isHasJoke: boolean;
 
   constructor(http: HttpService, formBuilder: FormBuilder) {
     this.http = http;
@@ -77,13 +81,21 @@ export class WeatherCardComponent implements OnInit {
   submitWb() {
     this.getWeatherBit(this.weatherBitForm.value['city']);
     this.weatherBitForm.reset()
-
   }
 
   getOpenWeatherMap(city) {
+    this.isHasJoke = false;
     this.http.getOpenWeatherMap(city).subscribe(data => {
       this.owmWeather = data;
       console.log(this.owmWeather);
+      let temp = 20;
+      if (this.owmWeather.temp > temp) {
+        this.http.getJoke().subscribe(response => {
+          console.log(response);
+          this.joke = response;
+          this.isHasJoke = true;
+        })
+      }
     });
   }
 

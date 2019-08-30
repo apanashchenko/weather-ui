@@ -67,6 +67,53 @@ body {
   justify-content: space-around;
 }
 
+div.parent{
+  border:solid black 1px;
+  display:table;
+  padding:5px;
+  //width:100%;
+  margin:5px 0; /* you can change/remove margin */
+}
+div.text{
+  vertical-align:middle;
+  display:table-cell;
+  text-align:justify;
+}
+div.parent .img{
+  vertical-align:middle;
+  display:table-cell;
+  padding-right:5px;
+  width:150px; /* you can change width */
+}
+div.img img{
+  //width:100%;
+  height:200px; /* you can change height */
+  vertical-align:middle;
+}
+
+#joke {
+  display:table;
+  margin: auto;
+  width: 500px;
+  height: 30px;
+  float: left;
+  //text-align: right;
+  div.img {
+    display:table-cell;
+    padding-right:10px;
+    width:150px;
+    height:200px; /* you can change height */
+    vertical-align:middle;
+  }
+
+  div.text{
+    vertical-align:middle;
+    display:table-cell;
+    text-align:justify;
+    padding-left:10px;
+  }
+}
+
 #searchFieldWidget{
   font-family: 'Lato', sans-serif;
   border-color: black;
@@ -112,13 +159,13 @@ body {
 }
 
 #searchForm {
-
-  align-content: center;
+  position: absolute;
+  right: 14rem;
 
   #searchField {
     font-family: 'Lato', sans-serif;
     border-color: black;
-    width: 420px;
+    width: 400px;
     height: 30px;
     border-width: 3px;
     margin-right: 10px;
