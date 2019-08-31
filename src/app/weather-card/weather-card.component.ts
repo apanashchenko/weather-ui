@@ -88,8 +88,8 @@ export class WeatherCardComponent implements OnInit {
     this.http.getOpenWeatherMap(city).subscribe(data => {
       this.owmWeather = data;
       console.log(this.owmWeather);
-      let temp = 20;
-      if (this.owmWeather.temp > temp) {
+      let temp = 20.0;
+      if (this.owmWeather.temp >= temp) {
         this.http.getJoke().subscribe(response => {
           console.log(response);
           this.joke = response;

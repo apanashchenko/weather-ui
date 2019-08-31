@@ -54,7 +54,7 @@
         <h3 id="provider">Open Weather</h3>
         <h2 id="location" data-id="city">{{ owmWeather?.city}}</h2>
         <span id="location" data-id="coord">lat: {{ owmWeather?.lat}}, lon: {{ owmWeather?.lon}}</span>
-        <span id="temp">{{ owmWeather?.temp}}</span>
+        <span id="temp">{{ owmWeather?.temp | number: '.1-2'}}</span>
       </div>
       <div class="Weather__right column-split">
         <div class="Weather__right-icon">
@@ -77,7 +77,7 @@
         <h3 id="provider">Weather Bit</h3>
         <h2 id="location" data-id="city">{{ weatherBitWeather?.city}}</h2>
         <span id="location" data-id="coord">lat: {{ weatherBitWeather?.lat}}, lon: {{ weatherBitWeather?.lon}}</span>
-        <span id="temp">{{ weatherBitWeather?.temp}}</span>
+        <span id="temp">{{ weatherBitWeather?.temp | number: '.1-2'}}</span>
       </div>
       <div class="Weather__right column-split">
         <div class="Weather__right-icon">
@@ -99,7 +99,7 @@
         <h3 id="provider">Apixu</h3>
         <h2 id="location" data-id="city">{{ apixuWeather?.city }}</h2>
         <span id="location" data-id="coord">lat: {{ apixuWeather?.lat }}, lon: {{ apixuWeather?.lon }}</span>
-        <span id="temp">{{ apixuWeather?.temp}}</span>
+        <span id="temp">{{ apixuWeather?.temp | number: '.1-2'}}</span>
       </div>
       <div class="Weather__right column-split">
         <div class="Weather__right-icon">
