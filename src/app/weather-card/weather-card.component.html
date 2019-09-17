@@ -96,10 +96,10 @@
 
     <div id="apixuWidget" class="Weather row center">
       <div class="Weather__main column column-center split-center">
-        <h3 id="provider">Apixu</h3>
-        <h2 id="location" data-id="city">{{ apixuWeather?.city }}</h2>
-        <span id="location" data-id="coord">lat: {{ apixuWeather?.lat }}, lon: {{ apixuWeather?.lon }}</span>
-        <span id="temp">{{ apixuWeather?.temp | number: '.1-2'}}</span>
+        <h3 id="provider">Weather Stack</h3>
+        <h2 id="location" data-id="city">{{ wsWeather?.city }}</h2>
+        <span id="location" data-id="coord">lat: {{ wsWeather?.lat }}, lon: {{ wsWeather?.lon }}</span>
+        <span id="temp">{{ wsWeather?.temp | number: '.1-2'}}</span>
       </div>
       <div class="Weather__right column-split">
         <div class="Weather__right-icon">
@@ -108,7 +108,7 @@
           </div>
         </div>
         <div class="Weather__right-desc column center column-center">
-          <span id="desc">{{ apixuWeather?.description }}</span>
+          <span id="desc">{{ wsWeather?.description }}</span>
         </div>
         <div id="refresh" class="Weather__right-refresh column center column-center">
           <span>Refresh</span>

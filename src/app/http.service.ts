@@ -15,9 +15,9 @@ export class HttpService {
     return this.http.get<Weather>('http://localhost:8080/owm/weather',{ params: params })
   }
 
-  getApixu(city: string) {
+  getWeatherStack(city: string) {
     let params = new HttpParams().set('city', city);
-    return this.http.get<Weather>('http://localhost:8080/apixu/weather',{ params: params })
+    return this.http.get<Weather>('http://localhost:8080/ws/weather',{ params: params })
   }
 
   getWeatherBit(city: string) {

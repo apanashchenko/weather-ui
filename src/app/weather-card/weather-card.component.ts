@@ -18,7 +18,7 @@ export class WeatherCardComponent implements OnInit {
   apixuForm: FormGroup;
   formBuilder: FormBuilder;
   owmWeather: Weather;
-  apixuWeather: Weather;
+  wsWeather: Weather;
   weatherBitWeather: Weather;
   http: HttpService;
   joke: Joke;
@@ -35,8 +35,8 @@ export class WeatherCardComponent implements OnInit {
       this.owmWeather = data;
       console.log(this.owmWeather);
     });
-    this.http.getApixu('los angeles').subscribe(data => {
-      this.apixuWeather = data;
+    this.http.getWeatherStack('los angeles').subscribe(data => {
+      this.wsWeather = data;
       console.log(this.owmWeather);
     });
     this.http.getWeatherBit('sydney').subscribe(data => {
@@ -64,7 +64,7 @@ export class WeatherCardComponent implements OnInit {
     let city = this.mainSearchForm.value['city'];
     this.getOpenWeatherMap(city);
     this.getWeatherBit(city);
-    this.getApixu(city);
+    this.getWeatherStack(city);
     this.mainSearchForm.reset();
   }
 
@@ -74,7 +74,7 @@ export class WeatherCardComponent implements OnInit {
   }
 
   submitApixu() {
-    this.getApixu(this.apixuForm.value['city']);
+    this.getWeatherStack(this.apixuForm.value['city']);
     this.apixuForm.reset()
   }
 
@@ -106,10 +106,10 @@ export class WeatherCardComponent implements OnInit {
     });
   }
 
-  getApixu(city) {
-    this.http.getApixu(city).subscribe(data => {
-      this.apixuWeather = data;
-      console.log(this.apixuWeather);
+  getWeatherStack(city) {
+    this.http.getWeatherStack(city).subscribe(data => {
+      this.wsWeather = data;
+      console.log(this.wsWeather);
     });
   }
 
