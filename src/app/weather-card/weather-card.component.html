@@ -36,7 +36,7 @@
       <button id="searchBtnWidget" type="button" (click)="submitWb()">Search</button>
     </form>
 
-    <form [formGroup]="apixuForm" id="searchFormApixu">
+    <form [formGroup]="wsForm" id="searchFormWs">
       <input formControlName="city" id="searchFieldWidget" type="text" placeholder="Search by Apixu"
              aria-label="Search">
       <button id="searchBtnWidget" type="button" (click)="submitApixu()">Search</button>
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <div id="apixuWidget" class="Weather row center">
+    <div id="wsWidget" class="Weather row center">
       <div class="Weather__main column column-center split-center">
         <h3 id="provider">Weather Stack</h3>
         <h2 id="location" data-id="city">{{ wsWeather?.city }}</h2>

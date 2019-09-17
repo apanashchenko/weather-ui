@@ -15,7 +15,7 @@ export class WeatherCardComponent implements OnInit {
   mainSearchForm: FormGroup;
   openWeatherForm: FormGroup;
   weatherBitForm: FormGroup;
-  apixuForm: FormGroup;
+  wsForm: FormGroup;
   formBuilder: FormBuilder;
   owmWeather: Weather;
   wsWeather: Weather;
@@ -55,7 +55,7 @@ export class WeatherCardComponent implements OnInit {
     this.weatherBitForm = this.formBuilder.group({
       city: [''],
     });
-    this.apixuForm = this.formBuilder.group({
+    this.wsForm = this.formBuilder.group({
       city: [''],
     });
   }
@@ -74,8 +74,8 @@ export class WeatherCardComponent implements OnInit {
   }
 
   submitApixu() {
-    this.getWeatherStack(this.apixuForm.value['city']);
-    this.apixuForm.reset()
+    this.getWeatherStack(this.wsForm.value['city']);
+    this.wsForm.reset()
   }
 
   submitWb() {
