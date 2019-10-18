@@ -93,6 +93,9 @@ export class WeatherCardComponent implements OnInit {
         this.http.getJoke().subscribe(response => {
           console.log(response);
           this.joke = response;
+          if (this.joke.value.img == null) {
+            this.joke.value.img = 'https://media2.giphy.com/media/BIuuwHRNKs15C/200.webp?cid=790b7611ad7099317869e782054f87b01de3e0e90ec12e34&rid=200.webp';
+          }
           this.isHasJoke = true;
         })
       }
