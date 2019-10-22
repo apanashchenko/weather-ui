@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
 
 const routes: Routes = [
-  {path: 'weather', component: WeatherCardComponent }
+  {path: '', component: WeatherCardComponent }
 ];
 
 @NgModule({

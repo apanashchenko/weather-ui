@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {HttpService} from "../http.service";
 import {Weather} from "../model/weather";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {ToastrService} from "ngx-toastr";
 import {Joke} from "../model/joke";
 
 @Component({
